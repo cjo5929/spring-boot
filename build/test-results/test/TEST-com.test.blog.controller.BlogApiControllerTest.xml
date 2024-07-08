@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.test.blog.controller.BlogApiControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-07-03T14:25:12" hostname="DESKTOP-U8EMNLK" time="1.212">
+<testsuite name="com.test.blog.controller.BlogApiControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-07-04T23:51:59" hostname="DESKTOP-MMCQPV1" time="0.522">
   <properties/>
-  <testcase name="updateArticle: 블로그 글 수정에 성공한다." classname="com.test.blog.controller.BlogApiControllerTest" time="1.212"/>
-  <system-out><![CDATA[23:25:05.040 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.test.blog.controller.BlogApiControllerTest]: BlogApiControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-23:25:05.277 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.test.blog.BlogApplication for test class com.test.blog.controller.BlogApiControllerTest
+  <testcase name="addArticle : 블로그에 글 추가 성공" classname="com.test.blog.controller.BlogApiControllerTest" time="0.522"/>
+  <system-out><![CDATA[08:51:56.836 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.test.blog.controller.BlogApiControllerTest]: BlogApiControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+08:51:56.904 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.test.blog.BlogApplication for test class com.test.blog.controller.BlogApiControllerTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,29 +14,29 @@
 
  :: Spring Boot ::                (v3.3.1)
 
-2024-07-03T23:25:05.881+09:00  INFO 104472 --- [blog] [    Test worker] c.t.b.controller.BlogApiControllerTest   : Starting BlogApiControllerTest using Java 17.0.9 with PID 104472 (started by minseo in C:\backend\spring-boot)
-2024-07-03T23:25:05.883+09:00  INFO 104472 --- [blog] [    Test worker] c.t.b.controller.BlogApiControllerTest   : No active profile set, falling back to 1 default profile: "default"
-2024-07-03T23:25:07.077+09:00  INFO 104472 --- [blog] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-03T23:25:07.179+09:00  INFO 104472 --- [blog] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 1 JPA repository interface.
-2024-07-03T23:25:07.832+09:00  INFO 104472 --- [blog] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-07-03T23:25:08.138+09:00  INFO 104472 --- [blog] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b35798
-2024-07-03T23:25:08.142+09:00  INFO 104472 --- [blog] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-07-03T23:25:08.327+09:00  INFO 104472 --- [blog] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-03T23:25:08.454+09:00  INFO 104472 --- [blog] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-03T23:25:08.517+09:00  INFO 104472 --- [blog] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-07-03T23:25:09.126+09:00  INFO 104472 --- [blog] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-03T23:25:09.218+09:00  WARN 104472 --- [blog] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-07-03T23:25:09.219+09:00  WARN 104472 --- [blog] [    Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-07-03T23:25:10.301+09:00  INFO 104472 --- [blog] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-03T23:25:10.359+09:00  INFO 104472 --- [blog] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-03T23:25:11.097+09:00  WARN 104472 --- [blog] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-07-03T23:25:12.165+09:00  INFO 104472 --- [blog] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-07-03T23:25:12.166+09:00  INFO 104472 --- [blog] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-07-03T23:25:12.172+09:00  INFO 104472 --- [blog] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2024-07-03T23:25:12.256+09:00  INFO 104472 --- [blog] [    Test worker] c.t.b.controller.BlogApiControllerTest   : Started BlogApiControllerTest in 6.723 seconds (process running for 8.776)
-2024-07-03T23:25:12.944+09:00  INFO 104472 --- [blog] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-07-03T23:25:12.945+09:00  INFO 104472 --- [blog] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-07-03T23:25:12.945+09:00  INFO 104472 --- [blog] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-07-05T08:51:57.121+09:00  INFO 1644 --- [blog] [    Test worker] c.t.b.controller.BlogApiControllerTest   : Starting BlogApiControllerTest using Java 17.0.11 with PID 1644 (started by SSAFY in C:\Users\SSAFY\Desktop\SSAFY\blog)
+2024-07-05T08:51:57.121+09:00  INFO 1644 --- [blog] [    Test worker] c.t.b.controller.BlogApiControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2024-07-05T08:51:57.499+09:00  INFO 1644 --- [blog] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-05T08:51:57.537+09:00  INFO 1644 --- [blog] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 1 JPA repository interface.
+2024-07-05T08:51:57.753+09:00  INFO 1644 --- [blog] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-05T08:51:57.869+09:00  INFO 1644 --- [blog] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@49580ca8
+2024-07-05T08:51:57.869+09:00  INFO 1644 --- [blog] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-05T08:51:57.938+09:00  INFO 1644 --- [blog] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-05T08:51:57.970+09:00  INFO 1644 --- [blog] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-05T08:51:58.001+09:00  INFO 1644 --- [blog] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-05T08:51:58.208+09:00  INFO 1644 --- [blog] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-05T08:51:58.255+09:00  WARN 1644 --- [blog] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-05T08:51:58.255+09:00  WARN 1644 --- [blog] [    Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-07-05T08:51:58.687+09:00  INFO 1644 --- [blog] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-05T08:51:58.724+09:00  INFO 1644 --- [blog] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-05T08:51:59.025+09:00  WARN 1644 --- [blog] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-05T08:51:59.388+09:00  INFO 1644 --- [blog] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-05T08:51:59.388+09:00  INFO 1644 --- [blog] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-05T08:51:59.388+09:00  INFO 1644 --- [blog] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-07-05T08:51:59.410+09:00  INFO 1644 --- [blog] [    Test worker] c.t.b.controller.BlogApiControllerTest   : Started BlogApiControllerTest in 2.428 seconds (process running for 3.095)
+2024-07-05T08:51:59.707+09:00  INFO 1644 --- [blog] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-05T08:51:59.707+09:00  INFO 1644 --- [blog] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-05T08:51:59.707+09:00  INFO 1644 --- [blog] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
 Hibernate: 
     select
         a1_0.id,
@@ -57,32 +57,14 @@ Hibernate:
         (content, title) 
     values
         (?, ?)
+ASdasdasd
 Hibernate: 
     select
         a1_0.id,
         a1_0.content,
         a1_0.title 
     from
-        article a1_0 
-    where
-        a1_0.id=?
-Hibernate: 
-    update
-        article 
-    set
-        content=?,
-        title=? 
-    where
-        id=?
-Hibernate: 
-    select
-        a1_0.id,
-        a1_0.content,
-        a1_0.title 
-    from
-        article a1_0 
-    where
-        a1_0.id=?
+        article a1_0
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
