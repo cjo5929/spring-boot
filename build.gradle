@@ -37,11 +37,18 @@ dependencies {
 	// 스프링 시큐리티를 테스트하기 위한 의존성 추가
 	testImplementation 'org.springframework.security:spring-security-test'
 
+   // JWT
+	implementation 'io.jsonwebtoken:jjwt:0.9.1' // 자바 JWT 라이브러리
+	implementation 'javax.xml.bind:jaxb-api:2.3.1' // XML 문서와 Java 객체 간 매핑 자동화
+
 	compileOnly 'org.projectlombok:lombok'
-	implementation 'mysql:mysql-connector-java:8.0.30'
 	annotationProcessor 'org.projectlombok:lombok'
+	testAnnotationProcessor 'org.projectlombok:lombok'
+
+	implementation 'mysql:mysql-connector-java:8.0.30'
+
+	testImplementation 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 tasks.named('test') {
