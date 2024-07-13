@@ -29,11 +29,15 @@ public class User implements UserDetails { // UserDetails를 상속받아 인증
     @Column(name = "email", unique = true, nullable = false)
     private String email;
 
+    @Column(name = "nickname", unique = true)
+    private String nickname;
+
 
     @Builder
-    public User(String email, String password, String auth) {
+    public User(String email, String password, String auth, String nickname) {
         this.email = email;
         this.password = password;
+        this.nickname = nickname;
     }
 
     //  권한 반환
@@ -79,5 +83,18 @@ public class User implements UserDetails { // UserDetails를 상속받아 인증
         // 계정이 사용 가능한지 확인하는 로직
 
         return true;
+    }
+
+    // 사용자 이름 변경
+    // update를 도메인에 하는이유
+    /*
+    * 비즈니스 로직의 응집성
+    * 사용자와 관련된 모든 로직을 한 곳에서 관리 가능
+    *
+    * */
+    public User update(String nickname) {
+        this.nickname = nickname;
+
+        return this;
     }
 }
