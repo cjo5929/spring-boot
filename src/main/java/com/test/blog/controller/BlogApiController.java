@@ -1,5 +1,6 @@
 package com.test.blog.controller;
 
+import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,9 +30,8 @@ public class BlogApiController {
 
 	// 글 작성
 	@PostMapping("/api/articles")
-	public ResponseEntity<Article> addArticle(@RequestBody AddArticleRequest request) {
-		Article savedArticle = blogService.save(request);
-		System.out.println("ASdasdasd");
+	public ResponseEntity<Article> addArticle(@RequestBody AddArticleRequest request, Principal principal) {
+		Article savedArticle = blogService.save(request, principal.getName());
 		return ResponseEntity.status(HttpStatus.CREATED)
 			.body(savedArticle);
 	}
