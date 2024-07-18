@@ -26,6 +26,20 @@ public class OAuth2UserCustomService extends DefaultOAuth2UserService {
     }
 
     // 유저가 있으면 업데이트, 없으면 유저 생성
+//    private User saveOrUpdate(OAuth2User oAuth2User) {
+//        Map<String, Object> attributes = oAuth2User.getAttributes();
+//        String email = (String) attributes.get("email");
+//        String name = (String) attributes.get("name");
+//        User user = userRepository.findByEmail(email)
+//                .map(entity -> entity.update(name))
+//                .orElse(User.builder()
+//                        .email(email)
+//                        .nickname(name)
+//                        .build());
+//        return userRepository.save(user);
+//    }
+
+//    // 유저가 있으면 업데이트, 없으면 유저 생성
     private User saveOrUpdate(OAuth2User oAuth2User) {
         Map<String, Object> attributes = oAuth2User.getAttributes();
 

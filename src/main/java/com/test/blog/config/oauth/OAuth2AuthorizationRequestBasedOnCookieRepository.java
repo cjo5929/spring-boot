@@ -26,6 +26,7 @@ public class OAuth2AuthorizationRequestBasedOnCookieRepository implements Author
 
     // 쿠키에서 OAuth2 인증 요청을 로드
     // 쿠키 값을 역직렬화하여 OAuth2AuthorizationRequest 객체로 변환
+    // 사용자가 OAuth2 제공자로부터 리디렉션된 후, OAuth2 인증 요청 정보를 다시 로드
     @Override
     public OAuth2AuthorizationRequest loadAuthorizationRequest(HttpServletRequest request) {
         Cookie cookie = WebUtils.getCookie(request, OAUTH2_AUTHORIZATION_REQUEST_COOKIE_NAME);
@@ -34,8 +35,12 @@ public class OAuth2AuthorizationRequestBasedOnCookieRepository implements Author
 
     // OAuth2 인증 요청을 쿠키에 저장
     //  CookieUtil.addCookie를 사용하여 요청을 직렬화한 후 쿠키에 저장
+    // 사용자가 처음 OAuth2 인증을 시도할 때 호출
     @Override
     public void saveAuthorizationRequest(OAuth2AuthorizationRequest authorizationRequest, HttpServletRequest request, HttpServletResponse response) {
+
+        //인증을 시도했지만 인증 과정이 취소되거나 실패했거나 인증 과정이 완료되어 더 이상 인증 요청이 필요하지 않을 때
+        // 즉, 인증요청을 한 적이 있다면 authorizationRequest이 null
         if (authorizationRequest == null) {
             removeAuthorizationRequestCookies(request, response);
             return;
