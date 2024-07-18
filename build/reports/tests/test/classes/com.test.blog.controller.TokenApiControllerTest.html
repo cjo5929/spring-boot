@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - TokenApiControllerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>TokenApiControllerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.test.blog.controller.html">com.test.blog.controller</a> &gt; TokenApiControllerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.524s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">createNewAccessToken: 새로운 액세스 토큰을 발급한다.</td>
+<td class="success">createNewAccessToken()</td>
+<td class="success">0.524s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>00:44:10.569 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.test.blog.controller.TokenApiControllerTest]: TokenApiControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+00:44:10.669 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.test.blog.BlogApplication for test class com.test.blog.controller.TokenApiControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.1)
+
+2024-07-12T00:44:10.906+09:00  INFO 4180 --- [blog] [    Test worker] c.t.b.controller.TokenApiControllerTest  : Starting TokenApiControllerTest using Java 17.0.11 with PID 4180 (started by SSAFY in C:\Users\SSAFY\Desktop\SSAFY\blog)
+2024-07-12T00:44:10.906+09:00  INFO 4180 --- [blog] [    Test worker] c.t.b.controller.TokenApiControllerTest  : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-07-12T00:44:11.371+09:00  INFO 4180 --- [blog] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-12T00:44:11.418+09:00  INFO 4180 --- [blog] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 3 JPA repository interfaces.
+2024-07-12T00:44:11.718+09:00  INFO 4180 --- [blog] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-12T00:44:11.850+09:00  INFO 4180 --- [blog] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@78b03788
+2024-07-12T00:44:11.850+09:00  INFO 4180 --- [blog] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-12T00:44:11.934+09:00  INFO 4180 --- [blog] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-12T00:44:11.988+09:00  INFO 4180 --- [blog] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-12T00:44:12.019+09:00  INFO 4180 --- [blog] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-12T00:44:12.267+09:00  INFO 4180 --- [blog] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-12T00:44:12.304+09:00  WARN 4180 --- [blog] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-12T00:44:12.304+09:00  WARN 4180 --- [blog] [    Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-07-12T00:44:12.821+09:00  INFO 4180 --- [blog] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    create table refresh_token (
+        id bigint not null auto_increment,
+        refresh_token varchar(255) not null,
+        user_id bigint not null,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    alter table refresh_token 
+       drop index UKf95ixxe7pa48ryn1awmh2evt7
+Hibernate: 
+    alter table refresh_token 
+       add constraint UKf95ixxe7pa48ryn1awmh2evt7 unique (user_id)
+2024-07-12T00:44:12.889+09:00  INFO 4180 --- [blog] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-12T00:44:13.174+09:00  WARN 4180 --- [blog] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-12T00:44:13.235+09:00  INFO 4180 --- [blog] [    Test worker] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2024-07-12T00:44:13.235+09:00  WARN 4180 --- [blog] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-07-12T00:44:13.876+09:00  WARN 4180 --- [blog] [    Test worker] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/static/**'], Ant [pattern='/static/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2024-07-12T00:44:13.958+09:00  INFO 4180 --- [blog] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-12T00:44:13.958+09:00  INFO 4180 --- [blog] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-12T00:44:13.958+09:00  INFO 4180 --- [blog] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-07-12T00:44:13.976+09:00  INFO 4180 --- [blog] [    Test worker] c.t.b.controller.TokenApiControllerTest  : Started TokenApiControllerTest in 3.213 seconds (process running for 4.079)
+2024-07-12T00:44:14.266+09:00  INFO 4180 --- [blog] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-12T00:44:14.266+09:00  INFO 4180 --- [blog] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-12T00:44:14.266+09:00  INFO 4180 --- [blog] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.password 
+    from
+        users u1_0
+Hibernate: 
+    delete 
+    from
+        users 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        users 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        users 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        users 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        users 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        users 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        users
+        (email, password) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        refresh_token
+        (refresh_token, user_id) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        rt1_0.id,
+        rt1_0.refresh_token,
+        rt1_0.user_id 
+    from
+        refresh_token rt1_0 
+    where
+        rt1_0.refresh_token=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.8</a> at 2024. 7. 12. 오전 12:44:14</p>
+</div>
+</div>
+</body>
+</html>
